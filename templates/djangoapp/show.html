@@ -1,0 +1,40 @@
+{% extends 'djangoapp/base.html' %}
+
+{% block title_block %}
+<h1>Student Details</h1>
+<a class='btn btn-warning' href='{% url "home" %}'>Back to Home</a>
+{% endblock %}
+
+
+{% block main_block %}
+
+<h2>First Name :</h2> {{st.fname}}
+<h2>Last Name  :</h2> {{st.lname}}
+<h2>Email :</h2> {{st.age}}
+<h2>Track :</h2> {{st.student_track}}
+
+{% endblock%}
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Details Screen</h1>
+    <a href="{% url 'home' %}">Back To Home</a>
+    <a class="btn btn-danger" href = "{% url 'del' st.id %}">Delete</a>
+    <hr />
+    <div><b>First Name: </b> {{ st.fname }}</div>
+    <div></div><b>Last Name: </b> {{ st.lname }}</div>
+    <div></div><b>Age: </b> {{ st.age }}</div>
+    <div></div><b>Graduated: </b> {{ st.is_adult }}</div>
+    <div></div><b>Track: </b> {{ st.student_track }}</div>
+
+</body>
+</html> -->
